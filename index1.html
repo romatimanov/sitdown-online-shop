@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="files/choices.min.css">
+    <link rel="stylesheet" href="files/normalize.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>SitDown</title>
+</head>
+
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header__body grid">
+            <a class="header__logo" href="#">
+                <img src="img/1080/logo.png" alt="logo">
+            </a>
+            <div class="header__top">
+                <div class="header__content">
+                    <p class="header__region">Ваш регион:</p>
+                    <div class="header__dropdown dropdown">
+                        <label class="dropdown__btn" data-value="">Москва</label>
+                        <svg width="12px" height="12px">
+                            <use xlink:href="img/icons/icons.svg#down"></use>
+                        </svg>
+                        <ul>
+                            <li data-value="1">
+                                <a href="#">Казань</a>
+                            </li>
+                            <li data-value="2">
+                                <a href="#">Уфа</a>
+                            </li>
+                            <li data-value="3">
+                                <a href="#">Пермь</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="header__phone" href="#">
+                    <svg width="17px" height="17px">
+                            <use xlink:href="img/icons/icons.svg#phone"></use>
+                       </svg>
+                    <span class="header__num">+7 (495) 885-45-47</span>
+                </a>
+            </div>
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">О компании</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Гарантия и возврат</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Корпоративным клиентам</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Дизайн-решение</a>
+                    </li>
+                </ul>
+            </nav>
+            <button id="burger" class="header__burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            <div id="menu" class="header__burger-menu menu-burger">
+                <div class="container">
+                    <button id="close" class="menu-burger__close">
+                        <svg width="24px" height="24px">
+                            <use xlink:href="img/icons/icons.svg#burger"></use>
+                        </svg>
+                    </button>
+                    <nav>
+                        <ul class="menu-burger__list">
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="index1.html">Каталог</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Магазины</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Шоу-рум</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Доставка и оплата</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Дисконт</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <nav class="header__navigation navigation">
+                <ul class="navigation__menu">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="index1.html">Каталог</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Магазины</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Шоу-рум</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Доставка и оплата</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Дисконт</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__bottom">
+                <div class="header__search search">
+                    <div class="search__enter">
+                        <svg class="search__icon" width="16px" height="16px">
+                            <use xlink:href="img/icons/icons.svg#search"></use>
+                        </svg>
+                        <input class="search__input" type="search" placeholder="Я хочу купить...">
+                    </div>
+                    <button class="search__arrow">
+                        <svg width="7px" height="12px">
+                            <use xlink:href="img/icons/icons.svg#arrow"></use>
+                        </svg>
+                    </button>
+                </div>
+                <select name="vac" id="selectCustom">
+                        <option hidden>Категория</option>
+                        <option value="Диваны">Диваны</option>
+                        <option value="Кресла">Кресла</option>
+                        <option value="Пуфы">Пуфы</option>
+                        <option value="Кровати">Кровати</option>
+                        <option value="Тумбы"> Тумбы</option>
+                        <option value="Комоды">Комоды</option>
+                        <option value="Стулья">Стулья</option>
+                        <option value="Столы">Столы</option>
+                        <option value="Аксессуары"> Аксессуары</option>
+                    </select>
+            </div>
+            <div class="header__icon icon-header">
+                <a class="icon-header__icon icon-man" href="#">
+                    <svg width="26px" height="28px">
+                            <use xlink:href="img/icons/icons.svg#man"></use>
+                    </svg>
+                </a>
+                <a class="icon-header__icon icon-shop" href="#">
+                    <svg width="41px" height="28px">
+                        <use xlink:href="img/icons/icons.svg#shop"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+    <main class="main">
+        <div class="container">
+            <section class="link">
+                <div class="link__list">
+                    <a class="link__item" href="index.html">Главная</a>
+                    <a class="link__item" href="#">Каталог</a>
+                    <a class="link__item" href="#">Диваны</a>
+                    <a href="#" class="link__item link-active">Прямые диваны</a>
+                </div>
+            </section>
+            <div class="page">
+                <aside class="aside">
+                    <div class="aside__menu">
+                        <h2 class="aside__title">Фильтровать по:</h2>
+                        <h3 class="aside__text text-category">Категория</h3>
+                        <div class="aside__filter filter">
+                            <ul class="filter__list">
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="sofas" type="checkbox" class="checkbox-side product-check form-check-input" name="namecheckbox" value="Диваны">
+                                            <label for="sofas" class="label">
+                                                <span class="filter__name">Диваны</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="armchairs" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Кресла">
+                                            <label for="armchairs" class="label">
+                                                <span class="filter__name">Кресла</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="puffs" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Пуфы">
+                                            <label for="puffs" class="label">
+                                                <span class="filter__name">Пуфы</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="beds" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Кровати">
+                                            <label for="beds" class="label">
+                                                <span class="filter__name">Кровати</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="cabinets" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Тумбы">
+                                            <label for="cabinets" class="label">
+                                                <span class="filter__name">Тумбы</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="dressers" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Комоды">
+                                            <label for="dressers" class="label">
+                                                <span class="filter__name">Комоды</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="chairs" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Стулья">
+                                            <label for="chairs" class="label">
+                                                <span class="filter__name">Стулья</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="tables" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Столы">
+                                            <label for="tables" class="label">
+                                                <span class="filter__name">Столы</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="accessories" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Аксессуары">
+                                            <label for="accessories" class="label">
+                                                <span class="filter__name">Аксессуары</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h3 class="aside__text text-price">Цена</h3>
+                            <div class="filter__content filter-slider">
+                                <div class="filter__cost table">
+                                    <div class="table__cell">
+                                        <span class="table__text">от</span>
+                                    </div>
+                                    <div class="table__cell">
+                                        <input id="priceMin" type="text" value="2000" class="table__control">
+                                    </div>
+                                    <div class="table__cell">
+                                        <span class="table__text">до</span>
+                                    </div>
+                                    <div class="table__cell">
+                                        <input id="priceMax" type="text" value="150 000">
+                                    </div>
+                                </div>
+                                <div class="filter__slider">
+                                    <div class="filter__zero">0</div>
+                                    <div id="filter__range"></div>
+                                </div>
+                            </div>
+                            <h3 class="aside__text text-sale">Скидка</h3>
+                            <ul class="aside__sale">
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="max" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Более 5 000">
+                                            <label for="max" class="label">
+                                                <span class="filter__name">Более 5 000</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="min" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Менее 5 000">
+                                            <label for="min" class="label">
+                                                <span class="filter__name">Менее 5 000</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="nomatter" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Не важно">
+                                            <label for="nomatter" class="label">
+                                                <span class="filter__name">Не важно</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h3 class="aside__text text-color">Цвет</h3>
+                            <ul class="filter__list color-list">
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="brown" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Коричневый" data-filter="brown">
+                                            <label for="brown" class="label">
+                                                <span class="filter__name">Коричневый</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="black" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Черный" data-filter="black">
+                                            <label for="black" class="label">
+                                                <span class="filter__name">Черный</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="beige" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Бежевый" data-filter="beige">
+                                            <label for="beige" class="label">
+                                                <span class="filter__name">Бежевый</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="grey" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Серый">
+                                            <label for="grey" class="label">
+                                                <span class="filter__name">Серый</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="white" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Белый">
+                                            <label for="white" class="label">
+                                                <span class="filter__name">Белый</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="blue" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Синий">
+                                            <label for="blue" class="label">
+                                                <span class="filter__name">Синий</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="orange" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Оранжевый">
+                                            <label for="orange" class="label">
+                                                <span class="filter__name">Оранжевый</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="yellow" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Желтый">
+                                            <label for="yellow" class="label">
+                                                <span class="filter__name">Желтый</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <div class="filter__check">
+                                        <div class="filter__label">
+                                            <input id="green" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="Зеленый">
+                                            <label for="green" class="label">
+                                                <span class="filter__name">Зеленый</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="aside__card card-aside">
+                        <div class="card-aside__image">
+                            <picture>
+                                <img src="img/1080/oxford.png" alt="image">
+                            </picture>
+                        </div>
+                        <div class="card-aside__body">
+                            <div class="card-aside__content">
+                                <h2 class="card-aside__title">Оксфорд 1950</h2>
+                                <p class="card-aside__subtitle">Новая коллекция изысканных кресел</p>
+                                <a class="card-aside__link" href="#">
+                                    <span class="card-aside__text">В каталог</span>
+                                    <span class="card-aside__btn">
+                                        <svg width="6px" height="9px">
+                                            <use xlink:href="img/icons/icons.svg#arrow"></use>
+                                       </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <section class="catalog">
+                    <div class="catalog__wrapper">
+                        <div class="catalog__choice">
+                            <h2 class="catalog__title title">Каталог</h2>
+                            <div class="catalog__goods"></div>
+                        </div>
+                        <div class="catalog__menu">
+                            <p class="catalog__subtitle">Фильтры:</p>
+                            <div class="filter catalog__filter">
+                                <div class="catalog__dropdown dropdown dropdown-one">
+                                    <label class="catalog__btn" data-value="">
+                                         <span class="catalog__text">Категория</span>
+                                         <svg width="12px" height="12px">
+                                            <use xlink:href="img/icons/icons.svg#down"></use>
+                                        </svg>
+                                    </label>
+                                    <ul class="filter__list">
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobsofas" type="checkbox" class="checkbox-side product-check form-check-input" name="namecheckbox" value="yes" data-filter="sofa">
+                                                    <label for="mobsofas" class="label">
+                                                        <span class="filter__name">Диваны</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobarmchairs" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes" data-filter="armchairs">
+                                                    <label for="mobarmchairs" class="label">
+                                                        <span class="filter__name">Кресла</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobpuffs" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes" data-filter="poufs">
+                                                    <label for="mobpuffs" class="label">
+                                                        <span class="filter__name">Пуфы</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobneds" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobneds" class="label">
+                                                        <span class="filter__name">Кровати</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobcabinets" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobcabinets" class="label">
+                                                        <span class="filter__name">Тумбы</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobdressers" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobdressers" class="label">
+                                                        <span class="filter__name">Комоды</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobchairs" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobchairs" class="label">
+                                                        <span class="filter__name">Стулья</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobtables" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobtables" class="label">
+                                                        <span class="filter__name">Столы</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobaccessories" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobaccessories" class="label">
+                                                        <span class="filter__name">Аксессуары</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="catalog__dropdown dropdown dropdown-two">
+                                    <label class="catalog__btn" data-value="">
+                                         <span class="catalog__text">Цена</span>
+                                         <svg width="12px" height="12px">
+                                            <use xlink:href="img/icons/icons.svg#down"></use>
+                                        </svg>
+                                    </label>
+                                    <ul class="filter__list">
+                                        <li class="filter__item">
+                                            <div class="filter__cost table catalog__price">
+                                                <div class="catalog__price-block">
+                                                    <div class="table__cell">
+                                                        <span class="table__text table__text-start">от</span>
+                                                    </div>
+                                                    <div class="table__cell">
+                                                        <input type="text" value="2000" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__price-block">
+                                                    <div class="table__cell">
+                                                        <span class="table__text">до</span>
+                                                    </div>
+                                                    <div class="table__cell">
+                                                        <input type="text" value="150 000" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="catalog__dropdown dropdown dropdown-three">
+                                    <label class="catalog__btn" data-value="">
+                                         <span class="catalog__text">Скидка</span>
+                                         <svg width="12px" height="12px">
+                                            <use xlink:href="img/icons/icons.svg#down"></use>
+                                        </svg>
+                                    </label>
+                                    <ul class="filter__list">
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobmax" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobmax" class="label">
+                                                        <span class="filter__name">Более 5 000</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobmin" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobmin" class="label">
+                                                        <span class="filter__name">Менее 5 000</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobnomatter" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobnomatter" class="label">
+                                                        <span class="filter__name">Не важно</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="catalog__dropdown dropdown">
+                                    <label class="catalog__btn" data-value="">
+                                         <span class="catalog__text">Цвет</span>
+                                         <svg width="12px" height="12px">
+                                            <use xlink:href="img/icons/icons.svg#down"></use>
+                                        </svg>
+                                    </label>
+                                    <ul class="filter__list">
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobbrown" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes" data-filter="brown">
+                                                    <label for="mobbrown" class="label">
+                                                        <span class="filter__name">Коричневый</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobblack" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes" data-filter="black">
+                                                    <label for="mobblack" class="label">
+                                                        <span class="filter__name">Черный</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobbeige" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes" data-filter="beige">
+                                                    <label for="mobbeige" class="label">
+                                                        <span class="filter__name">Бежевый</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobgrey" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobgrey" class="label">
+                                                        <span class="filter__name">Серый</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobwhite" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobwhite" class="label">
+                                                        <span class="filter__name">Белый</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobblue" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobblue" class="label">
+                                                        <span class="filter__name">Синий</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="moborange" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="moborange" class="label">
+                                                        <span class="filter__name">Оранжевый</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobyellow" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobyellow" class="label">
+                                                        <span class="filter__name">Желтый</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter__item">
+                                            <div class="filter__check">
+                                                <div class="filter__label">
+                                                    <input id="mobgreen" type="checkbox" class="checkbox-side product-check" name="namecheckbox" value="yes">
+                                                    <label for="mobgreen" class="label">
+                                                        <span class="filter__name">Зеленый</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-container catalog-swiper">
+                            <div class="catalog-wrapper swiper-wrapper">
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                            <use xlink:href="img/icons/icons.svg#star"></use>
+                                                       </svg>
+                                                <span class="card__rating">5,0</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <source media="(max-width: 350px)" srcset="img/320/catalog/04.png">
+                                                    <img src="img/1080/special/04.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван кожаный<br> “R-94”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">94 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                            <use xlink:href="img/icons/icons.svg#star"></use>
+                                                       </svg>
+                                                <span class="card__rating">4,9</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <source media="(max-width: 350px)" srcset="img/320/catalog/05.png">
+                                                    <img src="img/1080/special/05.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван апартековый<br> “T-75”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">69 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                            <use xlink:href="img/icons/icons.svg#star"></use>
+                                                       </svg>
+                                                <span class="card__rating">4,8</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <source media="(max-width: 350px)" srcset="img/320/catalog/06.png">
+                                                    <img src="img/1080/special/06.png" alt="product">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <h3 class="card__title">Диван тканевый<br> “D-31”</h3>
+                                        <div class="card__content">
+                                            <p class="card__price">28 490 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                                   </svg>
+                                                <span class="card__rating">4,8</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <source media="(max-width: 350px)" srcset="img/320/catalog/07.png">
+                                                    <img src="img/1080/special/07.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван велюровый<br> “Y-68”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">22 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                                   </svg>
+                                                <span class="card__rating">4,8</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <img src="img/1080/special/08.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван из шинила <br>“W-95”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">22 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                                   </svg>
+                                                <span class="card__rating">4,8</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <img src="img/1080/special/09.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван флоковый<br> “G-41”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">17 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                                   </svg>
+                                                <span class="card__rating">4,8</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <source media="(max-width: 350px)" srcset="img/320/catalog/06.png">
+                                                    <img src="img/1080/special/07.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван велюровый <br> “Y-68”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">19 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                                   </svg>
+                                                <span class="card__rating">4,7</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <source media="(max-width: 350px)" srcset="img/320/catalog/07.png">
+                                                    <source media="(max-width: 920px)" srcset="img/1080/special/06.png">
+                                                    <img src="img/1080/special/08.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван из шинила<br> “W-95”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">19 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                                   </svg>
+                                                <span class="card__rating">5,0</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <img src="img/1080/special/09.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван флоковый<br> “G-41”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">94 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                                   </svg>
+                                                <span class="card__rating">5,0</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <source media="(max-width: 350px)" srcset="img/320/catalog/09.png">
+                                                    <img src="img/1080/special/10.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван шиниловый<br> “V-43”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">94 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                                   </svg>
+                                                <span class="card__rating">4,9</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <img src="img/1080/special/1121.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван апартековый<br> “T-75”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">69 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                            <use xlink:href="img/icons/icons.svg#star"></use>
+                                                       </svg>
+                                                <span class="card__rating">4,8</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <img src="img/1080/special/1222.png" alt="product">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <h3 class="card__title">Диван тканевый<br> “D-31”</h3>
+                                        <div class="card__content">
+                                            <p class="card__price">28 490 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                                   </svg>
+                                                <span class="card__rating">4,8</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <source media="(max-width: 350px)" srcset="img/320/catalog/09.png">
+                                                    <source media="(max-width: 900px)" srcset="img/1080/special/08.png">
+                                                    <img src="img/1080/special/10.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван шиниловый<br> “V-43”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">22 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                                   </svg>
+                                                <span class="card__rating">4,8</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <source media="(max-width: 350px)" srcset="img/320/catalog/08.png">
+                                                    <source media="(max-width: 900px)" srcset="img/1080/special/09.png">
+                                                    <img src="img/1080/special/11.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван велюровый<br> “S-99”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">22 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                            <use xlink:href="img/icons/icons.svg#star"></use>
+                                                       </svg>
+                                                <span class="card__rating">4,8</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <img src="img/1080/special/15.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван из кожзама<br>“F-85”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">17 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                                   </svg>
+                                                <span class="card__rating">4,8</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <img src="img/1080/special/1225.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван велюровый <br> “R-85”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">19 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                                   </svg>
+                                                <span class="card__rating">4,7</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <img src="img/1080/special/1224.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван велюровый <br>“S-44”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">19 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="catalog-slide swiper-slide">
+                                    <article class="card">
+                                        <div class="card__top">
+                                            <div class="card__star">
+                                                <svg width="15px" height="15px">
+                                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                                   </svg>
+                                                <span class="card__rating">5,0</span>
+                                            </div>
+                                            <div class="card__image">
+                                                <picture>
+                                                    <img src="img/1080/special/1243.png" alt="product">
+                                                </picture>
+                                            </div>
+                                            <h3 class="card__title">Диван из шинила <br> “С-80”</h3>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="card__price">94 990 руб</p>
+                                            <a href="index2.html" class="card__btn">Купить</a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-pagination"></div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__left">
+                    <div class="footer__logo logo-footer">
+                        <a class="logo-footer__link" href="#">
+                            <img src="img/1080/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="footer__icon icon-footer">
+                        <a class="icon-footer__link" href="#">
+                            <svg width="30px" height="30px">
+                            <use xlink:href="img/icons/icons.svg#fb"></use>
+                         </svg>
+                        </a>
+                        <a class="icon-footer__link" href="#">
+                            <svg width="30px" height="30px">
+                            <use xlink:href="img/icons/icons.svg#vk"></use>
+                         </svg>
+                        </a>
+                        <a class="icon-footer__link" href="#">
+                            <svg width="30px" height="30px">
+                            <use xlink:href="img/icons/icons.svg#instagram"></use>
+                         </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__right">
+                    <nav class="footer__nav nav-one">
+                        <h3 class="footer__title">O нас</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">O компании</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Блог</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__nav nav-two">
+                        <h3 class="footer__title">Услуги</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Доставка</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Рассрочка и кредит</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Сборка и установка</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__nav nav-three">
+                        <h3 class="footer__title">Связь c нами</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Обратная связь</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__nav nav-four">
+                        <h3 class="footer__title">Сотрудничество</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="index3.html">Поставщикам</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Оптовикам</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Карьера</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__copy">
+                <p class="footer__text">SDP® 2011-2021</p>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="files/choices.min.js"></script>
+    <script src="files/inputmask.min.js"></script>
+    <script src="files/just-validate.min.js"></script>
+    <script src="files/focus-visible.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

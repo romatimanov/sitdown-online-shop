@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="files/choices.min.css">
+    <link rel="stylesheet" href="files/normalize.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>SitDown</title>
+</head>
+
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header__body grid">
+            <a class="header__logo" href="#">
+                <img src="img/1080/logo.png" alt="logo">
+            </a>
+            <div class="header__top">
+                <div class="header__content">
+                    <p class="header__region">Ваш регион:</p>
+                    <div class="header__dropdown dropdown">
+                        <label class="dropdown__btn" data-value="">Москва</label>
+                        <svg width="12px" height="12px">
+                            <use xlink:href="img/icons/icons.svg#down"></use>
+                        </svg>
+                        <ul>
+                            <li data-value="1">
+                                <a href="#">Казань</a>
+                            </li>
+                            <li data-value="2">
+                                <a href="#">Уфа</a>
+                            </li>
+                            <li data-value="3">
+                                <a href="#">Пермь</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="header__phone" href="#">
+                    <svg width="17px" height="17px">
+                            <use xlink:href="img/icons/icons.svg#phone"></use>
+                       </svg>
+                    <span class="header__num">+7 (495) 885-45-47</span>
+                </a>
+            </div>
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">О компании</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Гарантия и возврат</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Корпоративным клиентам</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Дизайн-решение</a>
+                    </li>
+                </ul>
+            </nav>
+            <button id="burger" class="header__burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            <div id="menu" class="header__burger-menu menu-burger">
+                <div class="container">
+                    <button id="close" class="menu-burger__close">
+                        <svg width="24px" height="24px">
+                            <use xlink:href="img/icons/icons.svg#burger"></use>
+                        </svg>
+                    </button>
+                    <nav>
+                        <ul class="menu-burger__list">
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="index1.html">Каталог</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Магазины</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Шоу-рум</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Доставка и оплата</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Дисконт</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <nav class="header__navigation navigation">
+                <ul class="navigation__menu">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="index1.html">Каталог</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Магазины</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Шоу-рум</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Доставка и оплата</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Дисконт</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__bottom">
+                <div class="header__search search">
+                    <div class="search__enter">
+                        <svg class="search__icon" width="16px" height="16px">
+                            <use xlink:href="img/icons/icons.svg#search"></use>
+                        </svg>
+                        <input class="search__input" type="search" placeholder="Я хочу купить...">
+                    </div>
+                    <button class="search__arrow">
+                        <svg width="7px" height="12px">
+                            <use xlink:href="img/icons/icons.svg#arrow"></use>
+                        </svg>
+                    </button>
+                </div>
+                <select name="vac" id="selectCustom">
+                        <option hidden>Категория</option>
+                        <option value="Диваны">Диваны</option>
+                        <option value="Кресла">Кресла</option>
+                        <option value="Пуфы">Пуфы</option>
+                        <option value="Кровати">Кровати</option>
+                        <option value="Тумбы"> Тумбы</option>
+                        <option value="Комоды">Комоды</option>
+                        <option value="Стулья">Стулья</option>
+                        <option value="Столы">Столы</option>
+                        <option value="Аксессуары"> Аксессуары</option>
+                    </select>
+            </div>
+            <div class="header__icon icon-header">
+                <a class="icon-header__icon icon-man" href="#">
+                    <svg width="26px" height="28px">
+                            <use xlink:href="img/icons/icons.svg#man"></use>
+                    </svg>
+                </a>
+                <a class="icon-header__icon icon-shop" href="#">
+                    <svg width="41px" height="28px">
+                        <use xlink:href="img/icons/icons.svg#shop"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+    <main class="main">
+        <div class="container">
+            <section class="link">
+                <div class="link__list">
+                    <a class="link__item" href="index.html">Главная</a>
+                    <a class="link__item" href="#">Каталог</a>
+                    <a class="link__item" href="#">Диваны</a>
+                    <a class="link__item" href="#">Прямые диваны</a>
+                    <a class="link__item link-active" href="#">D-31</a>
+                </div>
+            </section>
+            <section class="product">
+                <div class="product__top">
+                    <div class="product__left">
+                        <div class="product__slider js-open-modal" data-modal="1">
+                            <div class="swiper-container product__swiper">
+                                <div class="product__wrapper mywrapper swiper-wrapper">
+                                    <div class="product__slide swiper-slide">
+                                        <picture>
+                                            <img src="img/1080/CardItem/01.png" alt="product">
+                                        </picture>
+                                    </div>
+                                    <div class="product__slide swiper-slide">
+                                        <picture>
+                                            <img src="img/1080/CardItem/03.png" alt="product">
+                                        </picture>
+                                    </div>
+                                    <div class="product__slide swiper-slide">
+                                        <picture>
+                                            <img src="img/1080/CardItem/04.png" alt="product">
+                                        </picture>
+                                    </div>
+                                    <div class="product__slide swiper-slide">
+                                        <picture>
+                                            <img src="img/1080/CardItem/05.png" alt="product">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__preview preview-swiper">
+                            <div thumbsSlider="1" class="swiper-container preview-swiper__swiper">
+                                <div class="preview-swiper__wrapper swiper-wrapper">
+                                    <div class="preview-swiper__slide swiper-slide">
+                                        <picture>
+                                            <img src="img/1080/CardItem/02.png" alt="product">
+                                        </picture>
+                                    </div>
+                                    <div class="preview-swiper__slide swiper-slide">
+                                        <picture>
+                                            <img src="img/1080/CardItem/03.png" alt="product">
+                                        </picture>
+                                    </div>
+                                    <div class="preview-swiper__slide swiper-slide">
+                                        <picture>
+                                            <img src="img/1080/CardItem/04.png" alt="product">
+                                        </picture>
+                                    </div>
+                                    <div class="preview-swiper__slide swiper-slide">
+                                        <picture>
+                                            <img src="img/1080/CardItem/05.png" alt="product">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__content">
+                                <div class="product__info">
+                                    <div class="product__raiting">
+                                        <svg width="16px" height="16px">
+                                                <use xlink:href="img/icons/icons.svg#star"></use>
+                                        </svg>
+                                        <span class="product__num">4,8</span>
+                                    </div>
+                                    <h2 class="product__title">Диван тканевый прямой “D-31”</h2>
+                                    <p class="product__text">Мини 120 см без ящика Stark синий (Рогожка)</p>
+                                    <h3 class="product__price">28 490 руб</h3>
+                                    <div class="product__buy">
+                                        <button data-modal="2" class="btn js-open-modal product__btn">Купить в один клик</button>
+                                        <button class="product__busket">+ Добавить в корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal modal-txt" data-modal="1">
+                            <button class="modal__cross js-modal-close">
+                                <svg>
+                                    <use xlink:href="img/icons/icons.svg#close"></use>
+                               </svg>
+                            </button>
+                            <div class="modal__top">
+                                <div class="swiper-container modal__slider">
+                                    <div class="modal__wrapper swiper-wrapper">
+                                        <div class="modal__slide swiper-slide">
+                                            <picture>
+                                                <img src="img/1080/CardItem/desk.png" alt="product">
+                                            </picture>
+                                        </div>
+                                        <div class="modal__slide swiper-slide">
+                                            <picture>
+                                                <img src="img/1080/CardItem/01.png" alt="product">
+                                            </picture>
+                                        </div>
+                                        <div class="modal__slide swiper-slide">
+                                            <picture>
+                                                <img src="img/1080/CardItem/02.png" alt="product">
+                                            </picture>
+                                        </div>
+                                        <div class="modal__slide swiper-slide">
+                                            <picture>
+                                                <img src="img/1080/CardItem/03.png" alt="product">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal__bottom">
+                                <div thumbsSlider="2" class="swiper-container modal__preview preview-modal">
+                                    <div class="preview-modal__wrapper swiper-wrapper">
+                                        <div class="preview-modal__slide swiper-slide">
+                                            <picture>
+                                                <img src="img/1080/CardItem/modal/01m.png" alt="product">
+                                            </picture>
+                                        </div>
+                                        <div class="preview-modal__slide swiper-slide">
+                                            <picture>
+                                                <img src="img/1080/CardItem/modal/02m.png" alt="product">
+                                            </picture>
+                                        </div>
+                                        <div class="preview-modal__slide swiper-slide">
+                                            <picture>
+                                                <img src="img/1080/CardItem/modal/03m.png" alt="product">
+                                            </picture>
+                                        </div>
+                                        <div class="preview-modal__slide swiper-slide">
+                                            <picture>
+                                                <img src="img/1080/CardItem/modal/04m.png" alt="product">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__navigation">
+                                    <div class="my-button-prev preview__prev">
+                                        <button>
+                                        <svg width="7px" height="12px">
+                                            <use xlink:href="img/icons/icons.svg#arrowback"></use>
+                                        </svg>
+                                   </button>
+                                    </div>
+                                    <div class="my-button-next preview__next">
+                                        <button>
+                                        <svg width="7px" height="12px">
+                                            <use xlink:href="img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                   </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal product__form form-product" data-modal="2">
+                            <button class="modal__cross js-modal-close">
+                                <svg width="40px" height="40px">
+                                    <use xlink:href="img/icons/icons.svg#close"></use>
+                               </svg>
+                               </button>
+                            <h2 class="form-product__title">Купить в один клик</h2>
+                            <p class="form-product__text">Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении часа.</p>
+                            <form class="form form-product__form" action="POST">
+                                <label class="form-product__label">
+                                    <input class="form-product__input" type="text" name="name" placeholder="Как вас зовут?" data-validate-field="name">
+                                </label>
+                                <label class="form-product__label">
+                                    <input class="form-product__input" type="tel" name="tel" placeholder="Ваш телефон" data-validate-field="tel" data-validate-rules="phone">
+                                </label>
+                                <button data-modal="3" type="submit" class="btn js-open-modal form-product__btn">Отправить</button>
+                                <div class="product__label">
+                                    <input id="send" type="checkbox" class="checkbox-side checkbox-send form-check-input" name="namecheckbox">
+                                    <label for="send" class="label form-product__label">
+                                            <span class="form-product__user">Принимаю <a class="form-product__link" href="#">пользовательское соглашение</a></span>
+                                        </label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal product__done" data-modal="3">
+                            <button class="modal__cross js-modal-close">
+                            <svg width="40px" height="40px">
+                                <use xlink:href="img/icons/icons.svg#close"></use>
+                           </svg>
+                           </button>
+                            <picture>
+                                <source media="(max-width: 451px)" srcset="img/1080/CardItem/elep-mob.png">
+                                <img src="img/1080/CardItem/elep.png" alt="elephant">
+                            </picture>
+                            <h2 class="product__callback">Спасибо, мы вам перезвоним!</h2>
+                        </div>
+                    </div>
+                    <div class="product__right">
+                        <div class="product__info">
+                            <div class="product__raiting">
+                                <svg width="16px" height="16px">
+                                    <use xlink:href="img/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="product__num">4,8</span>
+                            </div>
+                            <h2 class="product__title">Диван тканевый прямой “D-31”</h2>
+                            <p class="product__text">Мини 120 см без ящика Stark синий (Рогожка)</p>
+                            <h3 class="product__price">28 490 руб</h3>
+                            <div class="product__buy">
+                                <button data-modal="2" class="btn js-open-modal product__btn">Купить в один клик</button>
+                                <button class="product__busket">+ Добавить в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__bottom about-product">
+                    <div class="about-product__about">
+                        <div class="about-product__left">
+                            <h2 class="about-product__title">Опорный механизм</h2>
+                            <div class="about-product__group">
+                                <p class="about-product__text">Опорный механизм напоминает пантограф, к которому добавили дополнительную секцию. У опорного дивана сиденье «выпрыгивает» вперёд и вытаскивает вторую часть спального места. Заключительный штрих — опустить спинку. </p>
+                                <p class="about-product__text">Этот механизм не портит пол и не боится ковров. Требуется чуть больше силы, чтобы разложить диван, но подросток справится.</p>
+                            </div>
+                            <div class="product__card-img">
+                                <picture>
+                                    <img src="img/1080/CardItem/hb-1.png" alt="product">
+                                </picture>
+                                <picture>
+                                    <img src="img/1080/CardItem/hb-2.png" alt="product">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="about-product__right characteristics">
+                            <div class="characteristics__content">
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Гарантия
+                                            <span class="characteristics__point">.........................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">18 месяцев</p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Артикул
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">AAA41269004</p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Длина
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">163 см</p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Высота
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">90 см</p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Глубина
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">108 см</p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Спальное место
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">200 см х 125 см</p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Высота посадки
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">45 см</p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Механизм
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">Опорный</p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Тип обивки
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">Рогожка </p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Цвет
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">Синий</p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Наполнитель
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">Независимый пружинный блок </p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Материал каркаса
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">Металл. рама с дерев. латами</p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Количество мест
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">Двухместные</p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Категория
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">Прямые тканевые диваны</p>
+                                </div>
+                                <div class="characteristics__info">
+                                    <div class="characteristics__items">
+                                        <p class="characteristics__name">Возврат
+                                            <span class="characteristics__point">..........................................................................................................................................................</span>
+                                        </p>
+                                    </div>
+                                    <p class="characteristics__text">Условия</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="similar">
+                <div class="similar__product">
+                    <div class="swiper-container similar__swiper">
+                        <div class="swiper-top similar__top">
+                            <h2 class="similar__title">Похожие товары</h2>
+                            <div class="navigation-btn similar__navigation">
+                                <div class="swiper-button-prev my-button-prev">
+                                    <button>
+                                <svg width="7px" height="12px">
+                                    <use xlink:href="img/icons/icons.svg#arrowback"></use>
+                               </svg>
+                               </button>
+                                </div>
+                                <div class="swiper-button-next my-button-next">
+                                    <button>
+                                <svg width="7px" height="12px">
+                                    <use xlink:href="img/icons/icons.svg#arrow"></use>
+                               </svg>
+                               </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mywrapper swiper-wrapper">
+                            <div class="myslide swiper-slide">
+                                <article class="card">
+                                    <div class="card__top">
+                                        <div class="card__star">
+                                            <svg width="16px" height="16px">
+                                            <use xlink:href="img/icons/icons.svg#star"></use>
+                                       </svg>
+                                            <span class="card__rating">4,5</span>
+                                        </div>
+                                        <div class="card__image">
+                                            <picture>
+                                                <source media="(max-width: 450px)" srcset="img/320/catalog/1225.png">
+                                                <img src="img/1080/special/1225.png" alt="product">
+                                            </picture>
+                                        </div>
+                                        <h3 class="card__title">Диван велюровый <br> “R-85”</h3>
+                                    </div>
+                                    <div class="card__content">
+                                        <p class="card__price">34 990 руб</p>
+                                        <a href="#" class="card__btn">Купить</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="myslide swiper-slide">
+                                <article class="card">
+                                    <div class="card__top">
+                                        <div class="card__star">
+                                            <svg width="16px" height="16px">
+                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                   </svg>
+                                            <span class="card__rating">4,6</span>
+                                        </div>
+                                        <div class="card__image">
+                                            <picture>
+                                                <source media="(max-width: 450px)" srcset="img/320/catalog/1121.png">
+                                                <img src="img/1080/special/1121.png" alt="product">
+                                            </picture>
+                                        </div>
+                                        <h3 class="card__title">Диван флоковый <br> “H-58”</h3>
+                                    </div>
+                                    <div class="card__content">
+                                        <p class="card__price">23 990 руб</p>
+                                        <a href="#" class="card__btn">Купить</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="myslide swiper-slide">
+                                <article class="card">
+                                    <div class="card__top">
+                                        <div class="card__star">
+                                            <svg width="16px" height="16px">
+                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                   </svg>
+                                            <span class="card__rating">4,5</span>
+                                        </div>
+                                        <div class="card__image">
+                                            <picture>
+                                                <img src="img/1080/special/1224.png" alt="product">
+                                            </picture>
+                                        </div>
+                                        <h3 class="card__title">Диван велюровый <br> “S-44”</h3>
+                                    </div>
+                                    <div class="card__content">
+                                        <p class="card__price">19 990 руб</p>
+                                        <a href="#" class="card__btn">Купить</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="myslide swiper-slide">
+                                <article class="card">
+                                    <div class="card__top">
+                                        <div class="card__star">
+                                            <svg width="16px" height="16px">
+                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                   </svg>
+                                            <span class="card__rating">4,8</span>
+                                        </div>
+                                        <div class="card__image">
+                                            <picture>
+                                                <img src="img/1080/special/10.png" alt="product">
+                                            </picture>
+                                        </div>
+                                        <h3 class="card__title">Диван шиниловый <br> “V-43”</h3>
+                                    </div>
+                                    <div class="card__content">
+                                        <p class="card__price">19 990 руб</p>
+                                        <a href="#" class="card__btn">Купить</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="myslide swiper-slide">
+                                <article class="card">
+                                    <div class="card__top">
+                                        <div class="card__star">
+                                            <svg width="16px" height="16px">
+                                        <use xlink:href="img/icons/icons.svg#star"></use>
+                                   </svg>
+                                            <span class="card__rating">4,8</span>
+                                        </div>
+                                        <div class="card__image">
+                                            <picture>
+                                                <img src="img/1080/special/1225.png" alt="product">
+                                            </picture>
+                                        </div>
+                                        <h3 class="card__title">Диван велюровый <br> “R-85”</h3>
+                                    </div>
+                                    <div class="card__content">
+                                        <p class="card__price">34 990 руб</p>
+                                        <a href="#" class="card__btn">Купить</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="overlay js-overlay-modal"></div>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__left">
+                    <div class="footer__logo logo-footer">
+                        <a class="logo-footer__link" href="#">
+                            <img src="img/1080/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="footer__icon icon-footer">
+                        <a class="icon-footer__link" href="#">
+                            <svg width="30px" height="30px">
+                            <use xlink:href="img/icons/icons.svg#fb"></use>
+                         </svg>
+                        </a>
+                        <a class="icon-footer__link" href="#">
+                            <svg width="30px" height="30px">
+                            <use xlink:href="img/icons/icons.svg#vk"></use>
+                         </svg>
+                        </a>
+                        <a class="icon-footer__link" href="#">
+                            <svg width="30px" height="30px">
+                            <use xlink:href="img/icons/icons.svg#instagram"></use>
+                         </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__right">
+                    <nav class="footer__nav nav-one">
+                        <h3 class="footer__title">O нас</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">O компании</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Блог</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__nav nav-two">
+                        <h3 class="footer__title">Услуги</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Доставка</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Рассрочка и кредит</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Сборка и установка</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__nav nav-three">
+                        <h3 class="footer__title">Связь c нами</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Обратная связь</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__nav nav-four">
+                        <h3 class="footer__title">Сотрудничество</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="index3.html">Поставщикам</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Оптовикам</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Карьера</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__copy">
+                <p class="footer__text">SDP® 2011-2021</p>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="files/choices.min.js"></script>
+    <script src="files/inputmask.min.js"></script>
+    <script src="files/just-validate.min.js"></script>
+    <script src="files/focus-visible.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

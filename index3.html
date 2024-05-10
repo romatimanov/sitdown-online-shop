@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="files/choices.min.css">
+    <link rel="stylesheet" href="files/normalize.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>SitDown</title>
+</head>
+
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header__body grid">
+            <a class="header__logo" href="#">
+                <img src="img/1080/logo.png" alt="logo">
+            </a>
+            <div class="header__top">
+                <div class="header__content">
+                    <p class="header__region">Ваш регион:</p>
+                    <div class="header__dropdown dropdown">
+                        <label class="dropdown__btn" data-value="">Москва</label>
+                        <svg width="12px" height="12px">
+                            <use xlink:href="img/icons/icons.svg#down"></use>
+                        </svg>
+                        <ul>
+                            <li data-value="1">
+                                <a href="#">Казань</a>
+                            </li>
+                            <li data-value="2">
+                                <a href="#">Уфа</a>
+                            </li>
+                            <li data-value="3">
+                                <a href="#">Пермь</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="header__phone" href="#">
+                    <svg width="17px" height="17px">
+                            <use xlink:href="img/icons/icons.svg#phone"></use>
+                       </svg>
+                    <span class="header__num">+7 (495) 885-45-47</span>
+                </a>
+            </div>
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">О компании</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Гарантия и возврат</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Корпоративным клиентам</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Дизайн-решение</a>
+                    </li>
+                </ul>
+            </nav>
+            <button id="burger" class="header__burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            <div id="menu" class="header__burger-menu menu-burger">
+                <div class="container">
+                    <button id="close" class="menu-burger__close">
+                        <svg width="24px" height="24px">
+                            <use xlink:href="img/icons/icons.svg#burger"></use>
+                        </svg>
+                    </button>
+                    <nav>
+                        <ul class="menu-burger__list">
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="index1.html">Каталог</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Магазины</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Шоу-рум</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Доставка и оплата</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Дисконт</a>
+                            </li>
+                            <li class="menu-burger__item">
+                                <a class="menu-burger__link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <nav class="header__navigation navigation">
+                <ul class="navigation__menu">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="index1.html">Каталог</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Магазины</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Шоу-рум</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Доставка и оплата</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Дисконт</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__bottom">
+                <div class="header__search search">
+                    <div class="search__enter">
+                        <svg class="search__icon" width="16px" height="16px">
+                            <use xlink:href="img/icons/icons.svg#search"></use>
+                        </svg>
+                        <input class="search__input" type="search" placeholder="Я хочу купить...">
+                    </div>
+                    <button class="search__arrow">
+                        <svg width="7px" height="12px">
+                            <use xlink:href="img/icons/icons.svg#arrow"></use>
+                        </svg>
+                    </button>
+                </div>
+                <select name="vac" id="selectCustom">
+                        <option hidden>Категория</option>
+                        <option value="Диваны">Диваны</option>
+                        <option value="Кресла">Кресла</option>
+                        <option value="Пуфы">Пуфы</option>
+                        <option value="Кровати">Кровати</option>
+                        <option value="Тумбы"> Тумбы</option>
+                        <option value="Комоды">Комоды</option>
+                        <option value="Стулья">Стулья</option>
+                        <option value="Столы">Столы</option>
+                        <option value="Аксессуары"> Аксессуары</option>
+                    </select>
+            </div>
+            <div class="header__icon icon-header">
+                <a class="icon-header__icon icon-man" href="#">
+                    <svg width="26px" height="28px">
+                            <use xlink:href="img/icons/icons.svg#man"></use>
+                    </svg>
+                </a>
+                <a class="icon-header__icon icon-shop" href="#">
+                    <svg width="41px" height="28px">
+                        <use xlink:href="img/icons/icons.svg#shop"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+    <main class="main">
+        <div class="container">
+            <section class="link">
+                <div class="link__list">
+                    <a class="link__item" href="index.html">Главная</a>
+                    <a class="link__item link-active" href="#">Сотрудничество</a>
+                </div>
+            </section>
+            <section class="cooperation">
+                <div class="cooperation__page">
+                    <h1 class="cooperation__title">Сотрудничество</h1>
+                    <div class="cooperation__suppilers cooperation-block">
+                        <h2 class="cooperation__subtitle">Поставщикам</h2>
+                        <p class="cooperation__text">При планировании обстановки торгового помещения важно обустроить его с комфортом для покупателей: грамотно зонировать, обеспечить эффективную демонстрацию и хранение товаров в зале. Если вам необходимо комплексное оснащение, организация
+                            зоны отдыха или отдельные предметы меблировки для поддержания эффективной торговой деятельности, мы поможем выбрать продукцию с учетом нагрузки от поступающего трафика.</p>
+                    </div>
+                    <div class="cooperation__getting cooperation-block">
+                        <h2 class="cooperation__subtitle">Что вы получаете?</h2>
+                        <div class="cooperation__group">
+                            <div>
+                                <svg width="25px" height="25px">
+                                <use xlink:href="img/icons/icons.svg#network"></use>
+                           </svg>
+                            </div>
+                            <p class="cooperation__text text-group">Мы ценим идеи и вдохновение и предлагаем сотрудничество талантливым дизайнерам и архитекторам. Выпускаемая нами продукция гармонично дополнит любой современный проект.</p>
+                        </div>
+                        <div class="cooperation__group">
+                            <div>
+                                <svg width="25px" height="25px">
+                                <use xlink:href="img/icons/icons.svg#briefcase"></use>
+                           </svg>
+                            </div>
+                            <p class="cooperation__text text-group">Комплексное решение для красивого и функционального обустройства любых пространств. </p>
+                        </div>
+                        <div class="cooperation__group">
+                            <div>
+                                <svg width="25px" height="25px">
+                                <use xlink:href="img/icons/icons.svg#pull"></use>
+                           </svg>
+                            </div>
+                            <p class="cooperation__text text-group">В ассортименте представлены все товарные группы для того, чтобы воссоздать обстановку в помещениях разных типов: кабинетах, смешанных пространствах, Open Space, гостевых и переговорных комнатах.</p>
+                        </div>
+                    </div>
+                    <div class="cooperation__advanced cooperation-block">
+                        <h2 class="cooperation__subtitle subtitle-cooperation">Ваши преимущества от сотрудничества</h2>
+                        <div class="cooperation__possibility">
+                            <h3 class="cooperation__subtitle orange-title">Возможность 1:</h3>
+                            <p class="cooperation__text">Создавайте незабываемые впечатления. Красиво меблированная фотостудия не оставит клиентов равнодушными, а созданная интерьером атмосфера будет надолго запечатлена на их снимках. Стильная и разноплановая обстановка творческого
+                                пространства – ключевая составляющая его успешной деятельности. Позаботьтесь о людях в кадре, а мы поможем правильно выбрать мебель.</p>
+                        </div>
+                        <div class="cooperation__possibility">
+                            <h3 class="cooperation__subtitle orange-title">Возможность 2:</h3>
+                            <p class="cooperation__text">Мы предлагаем застройщикам, работающим на территории РФ, участие наших специалистов от этапа проектирования обстановки квартир и подбора комплексных интерьерных решений до оптовых поставок мебели. Поможем организовать демонстрационный
+                                зал с образцами изделий и материалов на площади нового здания, чтобы покупатель заблаговременно подобрал тот вариант меблировки, который удовлетворит даже самые взыскательные ожидания.</p>
+                        </div>
+                    </div>
+                    <div class="cooperation__guarantees cooperation-block">
+                        <h2 class="cooperation__subtitle">Гарантии</h2>
+                        <ul class="cooperation__list">
+                            <li class="cooperation__item">
+                                <span class="cooperation__num">1.</span>
+                                <p class="cooperation__text">При приемке товара Покупатель должен внимательно проверить его количество, качество и ассортимент на соответствие сопроводительным документам и заказу. После подписания товарного чека Покупатель утрачивает право предъявления
+                                    претензий, которые можно выявить при приемке товара.</p>
+                            </li>
+                            <li class="cooperation__item cooperation__text">
+                                <span class="cooperation__num">2.</span>
+                                <p class="cooperation__text">На товары, сборка которых производилась покупателем самостоятельно (не специалистами Продавца), гарантийные обязательства Продавца не распространяются. Также гарантия не распространяется на повреждения товара, полученные
+                                    в ходе самостоятельной доставки и подъема товара. Покупатель не вправе отказаться от товара надлежащего качества, имеющего индивидуально-определенные свойства, т.е. если товар может быть использован исключительно приобретающим
+                                    его потребителем.</p>
+                            </li>
+                            <li class="cooperation__item cooperation__text">
+                                <span class="cooperation__num">3.</span>
+                                <p class="cooperation__text">Возврат или обмен товара возможен при условии, что сохранена упаковка, товарный вид и потребительские свойства товара, а также товарный и кассовый чеки. В этом случае мы гарантируем вам возврат полной стоимости товара (за
+                                    вычетом стоимости доставки). В случае отказа от товара при доставке, клиент оплачивает услуги доставки.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cooperation__period">
+                        <div class="cooperation__image">
+                            <picture>
+                                <img src="./img/pencil.png" alt="pencil">
+                            </picture>
+                        </div>
+                        <h2 class="cooperation__term">Срок гарантии на нашу мебель составляет от 18 до 60 месяцев</h2>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__left">
+                    <div class="footer__logo logo-footer">
+                        <a class="logo-footer__link" href="#">
+                            <img src="img/1080/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="footer__icon icon-footer">
+                        <a class="icon-footer__link" href="#">
+                            <svg width="30px" height="30px">
+                            <use xlink:href="img/icons/icons.svg#fb"></use>
+                         </svg>
+                        </a>
+                        <a class="icon-footer__link" href="#">
+                            <svg width="30px" height="30px">
+                            <use xlink:href="img/icons/icons.svg#vk"></use>
+                         </svg>
+                        </a>
+                        <a class="icon-footer__link" href="#">
+                            <svg width="30px" height="30px">
+                            <use xlink:href="img/icons/icons.svg#instagram"></use>
+                         </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__right">
+                    <nav class="footer__nav nav-one">
+                        <h3 class="footer__title">O нас</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">O компании</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Блог</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__nav nav-two">
+                        <h3 class="footer__title">Услуги</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Доставка</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Рассрочка и кредит</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Сборка и установка</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__nav nav-three">
+                        <h3 class="footer__title">Связь c нами</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Обратная связь</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__nav nav-four">
+                        <h3 class="footer__title">Сотрудничество</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="index3.html">Поставщикам</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Оптовикам</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Карьера</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__copy">
+                <p class="footer__text">SDP® 2011-2021</p>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="files/choices.min.js"></script>
+    <script src="files/inputmask.min.js"></script>
+    <script src="files/just-validate.min.js"></script>
+    <script src="files/focus-visible.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
